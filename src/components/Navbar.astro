@@ -1,15 +1,17 @@
 ---
-const links = [
+interface Link {
+    href: string,
+    name: string
+}
+
+const links: Link[] =
+[
     {href:"/", name:"Home"},
     {href:"/projects", name:"Projects"},
 
 ]
 ---
-
-
 <!-- navbar -->
-
-
 <nav class="bg-red-100 flex justify-between">
 
     <div class="uppercase">
