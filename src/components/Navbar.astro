@@ -1,0 +1,28 @@
+---
+const links = [
+    {href:"/", name:"Home"},
+    {href:"/projects", name:"Projects"},
+
+]
+---
+
+
+<!-- navbar -->
+
+
+<nav class="bg-red-100 flex justify-between">
+
+    <div class="uppercase">
+        <h1>Michal Wierzgon</h1>
+    </div>
+
+
+    <ul class="list-none">
+        <li>
+
+{links.map(link =>(<a href={link.href}>{link.name}</a>))}
+
+
+        </li>
+    </ul>
+</nav>

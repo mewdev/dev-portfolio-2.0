@@ -1,0 +1,2 @@
+1. Tailwind error?
+2. Prettier config?

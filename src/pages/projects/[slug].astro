@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, CollectionEntry } from "astro:content";
 
+// What this does?
 export const getStaticPaths = async () => {
     const projects = await getCollection("projects")
     const paths = projects.map(project => {
@@ -34,5 +35,11 @@ const { Content } = await project.render()
 
         <h1 class="text-3xl text-black">{project.data.projectName}</h1>
 <p>{project.body}</p>
+
+
+
+<!-- albums component -->
+    {project.data.projectDiscography.map(album => <li>{album.albumName} // {album.albumYear}</li>)}
+
     </main>
 </Layout>
