@@ -23,12 +23,11 @@ const links: {href: string, name: string}[] =
     </div>
 
 
-    <ul class="list-none">
-        <li>
-
-{links.map(link =>(<a href={link.href}>{link.name}</a>))}
+    <ul class="list-none flex gap-4">
 
 
-        </li>
+{links.map(link =>(<li><a href={link.href}>{link.name}</a></li>))}
+
+
     </ul>
 </nav>
