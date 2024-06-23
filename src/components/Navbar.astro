@@ -1,15 +1,21 @@
 ---
-const links = [
+
+// Interface vs inline?
+
+// interface Link {
+//     href: string,
+//     name: string
+// }
+
+
+const links: {href: string, name: string}[] =
+[
     {href:"/", name:"Home"},
     {href:"/projects", name:"Projects"},
 
 ]
 ---
-
-
 <!-- navbar -->
-
-
 <nav class="bg-red-100 flex justify-between">
 
     <div class="uppercase">
