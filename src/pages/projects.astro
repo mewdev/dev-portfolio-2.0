@@ -19,6 +19,8 @@ const projects = await getCollection("projects")
 
 <!-- project component -->
 {projects.map(project =>(
+// a href whole div link
+<a href={`/projects/${project.slug}`}>
 <div class="bg-blue-100 m-5">
     <h1 class="text-2xl">{project.data.projectName}</h1>
     <a target="_blank" class="underline"href={project.data.projectUrl}>{project.data.projectUrl}</a>
@@ -30,11 +32,15 @@ const projects = await getCollection("projects")
     <Image
     src={project.data.image}
     alt={`${project.data.projectName}`}
+    width={500}
+    height={500}
+    class="aspect-square object-cover"
     />
     
     <hr>
 
 </div>
+</a>
 ))}
 
 </Layout>
