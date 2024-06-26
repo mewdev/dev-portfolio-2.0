@@ -1,12 +1,13 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets'
 
 const projects = await getCollection("projects")
 
 
 ---
-<Layout>
+<Layout title="Projects">
 <!-- project link list -->
 <div class="bg-green-100 flex flex-col">
 {projects.map(project =>(
@@ -26,6 +27,11 @@ const projects = await getCollection("projects")
     <ul>
 
     </ul>
+    <Image
+    src={project.data.image}
+    alt={`${project.data.projectName}`}
+    />
+    
     <hr>
 
 </div>
