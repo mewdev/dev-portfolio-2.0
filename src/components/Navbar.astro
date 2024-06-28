@@ -2,28 +2,29 @@
 
 // Interface vs inline?
 
-// interface Link {
-//     href: string,
-//     name: string
-// }
+interface Link {
+    href: string,
+    name: string
+}
 
-
-const links: {href: string, name: string}[] =
+const links: Link[] =
 [
-    {href:"/", name:"Home"},
     {href:"/projects", name:"Projects"},
+    {href:"/about", name:"About"}
 
 ]
 ---
 <!-- navbar -->
 <nav class="bg-red-100 flex justify-between">
 
-    <div class="uppercase">
-        <h1>Michal Wierzgon</h1>
+
+<!-- make animated slashes as react component? -->
+    <div>
+        <a href="/"><h1>michal <span>\\</span> wierzgon</h1></a>
     </div>
 
 
-    <ul class="list-none flex gap-4">
+    <ul class="list-none flex gap-4 lowercase">
 
 
 {links.map(link =>(<li><a href={link.href}>{link.name}</a></li>))}
