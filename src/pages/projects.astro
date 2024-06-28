@@ -11,7 +11,7 @@ const projects = await getCollection("projects")
 <!-- project link list -->
 <div class="bg-green-100 flex flex-col">
 {projects.map(project =>(
-    <a class="underline" href={`/projects/${project.slug}`}>{project.data.projectName}</a>
+    <a class="underline" href={`/projects/${project.slug}`}>{project.data.name}</a>
 ))}
 </div>
 
@@ -22,8 +22,8 @@ const projects = await getCollection("projects")
 // a href whole div link
 <a href={`/projects/${project.slug}`}>
 <div class="bg-blue-100 m-5">
-    <h1 class="text-2xl">{project.data.projectName}</h1>
-    <a target="_blank" class="underline"href={project.data.projectUrl}>{project.data.projectUrl}</a>
+    <h1 class="text-2xl">{project.data.name}</h1>
+    <a target="_blank" class="underline"href={project.data.github}>{project.data.github}</a>
 
     {/* project's discography component */}
     <ul>
@@ -31,7 +31,7 @@ const projects = await getCollection("projects")
     </ul>
     <Image
     src={project.data.image}
-    alt={`${project.data.projectName}`}
+    alt={`${project.data.name}`}
     width={500}
     height={500}
     class="aspect-square object-cover"

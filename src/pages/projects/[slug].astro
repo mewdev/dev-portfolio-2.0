@@ -30,16 +30,14 @@ const { Content } = await project.render()
 ---
 
 
-<Layout title={project.data.projectName}>
+<Layout title={project.data.name}>
     <main>
 
-        <h1 class="text-3xl text-black">{project.data.projectName}</h1>
-<p>{project.body}</p>
+        <h1 class="text-3xl text-black">{project.data.name}</h1>
 
 
 
-<!-- albums component -->
-    {project.data.projectDiscography.map(album => <li>{album.albumName} // {album.albumYear}</li>)}
+
 
     </main>
 </Layout>
