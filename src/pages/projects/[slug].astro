@@ -67,7 +67,7 @@ alt="doijdj"/> -->
         <!-- links component -->
     <div class="bg-purple-500 w-1/3">
         <ul>
-            {project.data.github}
+            {project.data.links.map(project => <li><a target="_blank" href={project.href}>{project.name}</a></li>)}
         </ul>
     </div>
 </div>

@@ -7,7 +7,8 @@ const projectsCollection = defineCollection({
         live: z.string(),
         techstack: z.array(z.string()),
         image: image(),
-        shortDescription: z.string()
+        shortDescription: z.string(),
+        links: z.array(z.object({href: z.string(), name: z.string()}))
     })
 })
 
