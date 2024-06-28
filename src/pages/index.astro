@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Image from 'astro:assets'
+import { Image } from 'astro:assets';
 import heroImage from '../assets/images/hero-photo.jpg'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Michał Wierzgoń">
 	<main>
 
 
@@ -13,10 +13,9 @@ import heroImage from '../assets/images/hero-photo.jpg'
 
 <p>Junior frontend developer</p>
 
-<Image 
-src={heroImage.src}
-alt={"suhuh"}
-/>
+<Image
+src={heroImage}
+alt="A photo of Michał Wierzgoń smiling"/>
 
 </section>
 
